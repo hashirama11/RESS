@@ -1,0 +1,18 @@
+{% extends "layouts/session.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<main class="form-signin w-100 m-auto">
+  <form action="{% url 'logout_e' %}" method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Plantilla de Prueba</h1>
+    <h2>Esta es una plantilla de prueba para inicios de session en Django.</h2>
+    </div>
+    <button class="btn btn-warning" type="submit">
+      SALIR
+    </button>
+    <p class="mt-5 mb-3 text-body-secondary">&copy;2024-2025</p>
+  </form>
+</main>
+{% endblock %}

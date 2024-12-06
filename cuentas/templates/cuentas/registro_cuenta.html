@@ -1,0 +1,147 @@
+{% load static %}
+
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="{% static 'cuentas/js/color-modes.js' %}"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.122.0" />
+    <title>Titulo por definir</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/features/"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+    <link
+      href="{% static 'cuentas/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <link href="{% static 'cuentas/css/features.css' %}" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="features.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="b-example-divider"></div>
+
+      <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Tipo de Usuario</h2>
+        <a href="{% url 'home' %}" class="btn btn-outline-light">
+          Regresar al Inicio
+        </a>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="
+                background-image: url('{% static 'cuentas/assets/especialista.jpg' %}');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Especialista de la Salud
+                </h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <a
+                      href="{% url 'register_especialista' %}"
+                      class="btn btn-outline-light"
+                    >
+                      Registrarse como
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <small>Brindemos la mejor asistencia</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="
+                background-image: url('{% static 'cuentas/assets/paciente.jpg' %}');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Paciente</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <a
+                      href="{% url 'register_paciente' %}"
+                      class="btn btn-outline-light"
+                    >
+                      Registrarse como
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <small>Lleve su estado de salud donde quiera!!</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="
+                background-image: url('{% static 'cuentas/assets/observador.jpg' %}');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Observador
+                </h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <a href="#" class="btn btn-outline-light">
+                      Registrarse como
+                    </a>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <small>Aprendamos hacer un mundo mejor!!</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-example-divider"></div>
+    </main>
+    {% include "layouts/toggle.html"%}
+
+    <script src="{% static 'cuentas/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

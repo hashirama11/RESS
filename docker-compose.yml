@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    container_name: django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000" # añadido para exponer el puerto de Django
+    depends_on:
+      - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=myproject.settings
+
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: ress
+      POSTGRES_USER: chester
+      POSTGRES_PASSWORD: Turambar11#
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"  # Añadido para exponer el puerto de PostgreSQL
+
+volumes:
+  db-data:
